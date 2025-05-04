@@ -5,4 +5,4 @@ seaborn
 openpyxl
 scikit-learn
 python-docx
-openai
+openai==0.28
