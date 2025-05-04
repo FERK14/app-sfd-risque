@@ -25,7 +25,7 @@ df['Probabilité_Risque'] = model.predict_proba(X_scaled)[:, 1]
 
 # Définir la fonction de génération de texte via Hugging Face FLAN-T5
 API_URL = "https://api-inference.huggingface.co/models/google/flan-t5-small"
-headers = {"Authorization": "Bearer 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"}
+headers = {"Authorization": f"Bearer {st.secrets['hf_token']}"}
 
 def rediger_commentaire_sfd_flan(row):
     prompt = f"""
